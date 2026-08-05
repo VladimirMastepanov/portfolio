@@ -300,7 +300,7 @@
     <div class="section-head">
       <div class="eyebrow">Production Application</div>
       <h2>Stattix - Attendance & Revenue Tracker for Tutors</h2>
-      <p>Offline-first mobile CRM and billing platform for private tutors, featuring hybrid data synchronization, local revenue reporting, and automated pass management.</p>
+      <p>Offline-first mobile CRM for private tutors: record payment history, track lesson passes, manage attendance, and calculate revenue analytics locally.</p>
     </div>
 
     <div class="app-layout">
@@ -317,31 +317,31 @@
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Architecture</span>
           <h3>Offline-First Sync Engine</h3>
-          <p>SQLite for zero-latency local operations, synced asynchronously with remote Supabase (PostgreSQL).</p>
+          <p>SQLite for zero-latency local operations, synced asynchronously with remote Supabase.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag" style="color: var(--orange);">Billing Engine</span>
-          <h3>Flexible Payment Models</h3>
-          <p>Automated tracking for one-time payments, lesson passes, and time-limited bundles with auto-expiration.</p>
+          <span class="tag" style="color: var(--orange);">Ledger & Pass Tracking</span>
+          <h3>Payment & Pass Tracking</h3>
+          <p>Manual logging for one-time payments, pre-paid lesson passes, and time-limited bundles with auto-expiration alerts.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Data Integrity</span>
           <h3>State-Rollback Mechanism</h3>
-          <p>Custom session tracking rollback to keep financial ledgers 100% accurate after manual historical edits.</p>
+          <p>Custom session-tracking rollback to keep financial ledgers 100% accurate after manual historical corrections.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Analytics</span>
-          <h3>SQLite Financial Analytics</h3>
-          <p>Real-time revenue breakdown by source, period, and client directly via optimized SQL reporting queries.</p>
+          <h3>SQLite Financial Reporting</h3>
+          <p>Real-time revenue breakdowns by source, period, and client directly via optimized local SQL queries.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">UX & System</span>
           <h3>Local Notifications</h3>
-          <p>Background push notification scheduler alerting tutors when client lesson passes or bundles expire.</p>
+          <p>Background push notification scheduler alerting tutors when client lesson passes or bundles are about to expire.</p>
         </div>
 
         <div class="spec-card">
