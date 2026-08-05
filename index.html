@@ -111,17 +111,22 @@
   /* ---------- SECTION HEADERS ---------- */
   .section-head { margin-bottom: 40px; }
   .section-head h2 { font-size: 1.9rem; margin-top: 10px; }
-  .section-head p { color: var(--text-dim); margin-top: 10px; max-width: 620px; }
+  .section-head p { color: var(--text-dim); margin-top: 10px; max-width: 640px; }
 
-  /* ---------- JIGSAW (Technical & Product) ---------- */
-  .jigsaw { background: var(--bg-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .jigsaw-layout { display: flex; gap: 32px; align-items: flex-start; margin-top: 24px; }
-  .jigsaw-video {
+  /* ---------- APP LAYOUT (Unified Project Section) ---------- */
+  .project-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .project-section.alt { background: var(--bg-raised); }
+  
+  .app-layout { display: flex; gap: 32px; align-items: flex-start; margin-top: 24px; }
+  .app-video {
     width: 280px; aspect-ratio: 9/16; flex-shrink: 0;
-    background: #000; border: 1px solid var(--line); border-radius: 8px;
+    background: #000; border: 1px solid var(--line); border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     color: var(--text-dim); font-family: var(--mono); font-size: 0.8rem; text-align: center; padding: 16px;
+    overflow: hidden;
   }
+  .app-video iframe, .app-video video { width: 100%; height: 100%; border: 0; object-fit: cover; }
+
   .spec-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 12px; flex-grow: 1;
@@ -129,6 +134,8 @@
   .spec-card {
     background: var(--bg); padding: 20px; border: 1px solid var(--line); border-radius: 8px;
   }
+  .project-section.alt .spec-card { background: var(--bg); }
+  
   .spec-card .tag {
     font-family: var(--mono); font-size: 0.72rem; color: var(--blue);
     letter-spacing: 0.05em; text-transform: uppercase;
@@ -138,18 +145,6 @@
   .spec-card .metric {
     font-family: var(--mono); color: var(--green); font-size: 0.82rem; margin-top: 8px; display: block;
   }
-
-  /* ---------- STATTIX (CRM App) ---------- */
-  .stattix { border-bottom: 1px solid var(--line); }
-  .project-card-simple {
-    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px;
-    padding: 32px; margin-top: 20px;
-  }
-  .project-card-simple h3 { font-size: 1.4rem; font-family: var(--display); margin-bottom: 8px; }
-  .project-card-simple .subtitle { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px; }
-  .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
-  .feature-item { font-size: 0.9rem; color: var(--text-dim); }
-  .feature-item strong { color: var(--text); display: block; margin-bottom: 4px; font-family: var(--body); }
 
   /* ---------- SOUND PROJECTS ---------- */
   .sound-card {
@@ -196,8 +191,8 @@
   footer a { text-decoration: underline; text-underline-offset: 4px; }
 
   @media (max-width: 768px) {
-    .jigsaw-layout { flex-direction: column; align-items: center; }
-    .jigsaw-video { width: 100%; max-width: 300px; }
+    .app-layout { flex-direction: column; align-items: center; }
+    .app-video { width: 100%; max-width: 300px; }
   }
   @media (max-width: 640px) {
     section { padding: 64px 0; }
@@ -231,29 +226,29 @@
   </div>
   <div class="container hero-content">
     <div class="eyebrow">Frontend & Mobile Developer</div>
-    <h1>Building mobile products — from custom graphics engines to offline-first apps.</h1>
+    <h1>Building mobile products - from custom graphics engines to offline-first apps.</h1>
     <p class="lead">
       Independent software engineer with 3+ years shipping React Native products end-to-end:
-      architecture, custom Skia rendering, local data layers (SQLite), and store deployment.
+      architecture, custom Skia rendering, local data layers (SQLite + Supabase), and store release.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#jigsaw">Explore Flagship Project</a>
+      <a class="btn btn-primary" href="#jigsaw">Explore Projects</a>
       <a class="btn btn-ghost" href="#contact">Get in Touch</a>
     </div>
   </div>
 </section>
 
-<!-- FLAGSHIP PROJECT: JIGSAW PUZZLE -->
-<section class="jigsaw" id="jigsaw">
+<!-- PROJECT 1: JIGSAW PUZZLE -->
+<section class="project-section alt" id="jigsaw">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Flagship project</div>
-      <h2>Jigsaw Puzzle — Cross-Platform Mobile Game</h2>
+      <h2>Jigsaw Puzzle - Cross-Platform Mobile Game</h2>
       <p>Solo end-to-end product development: designed the full mobile app architecture, dynamic puzzle game logic, UI interactions, custom Skia graphics engine, and store pipeline.</p>
     </div>
 
-    <div class="jigsaw-layout">
-      <div class="jigsaw-video">
+    <div class="app-layout">
+      <div class="app-video">
         Gameplay Video Demo<br><small style="opacity: 0.7">(Screen capture placeholder)</small>
       </div>
 
@@ -299,42 +294,67 @@
   </div>
 </section>
 
-<!-- ADDITIONAL COMMERCIAL PROJECT: STATTIX -->
-<section class="stattix" id="stattix">
+<!-- PROJECT 2: STATTIX -->
+<section class="project-section" id="stattix">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Production Application</div>
-      <h2>Stattix — Attendance & Revenue Tracker for Tutors</h2>
-      <p>Offline-first mobile CRM and financial management tool designed for private educators.</p>
+      <h2>Stattix - Attendance & Revenue Tracker for Tutors</h2>
+      <p>Offline-first mobile CRM and billing platform for private tutors, featuring hybrid data synchronization, local revenue reporting, and automated pass management.</p>
     </div>
 
-    <div class="project-card-simple">
-      <h3>Complex State & SQLite Data Layer</h3>
-      <p class="subtitle">Built to work seamlessly offline, ensuring absolute accuracy in financial reporting and lesson tracking.</p>
+    <div class="app-layout">
+      <div class="app-video">
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_STATTIX_VIDEO_ID" 
+          title="Stattix App Demo"
+          allowfullscreen
+          allow="clipboard-write; encrypted-media; picture-in-picture"
+        ></iframe>
+      </div>
 
-      <div class="feature-list">
-        <div class="feature-item">
-          <strong>Relational SQLite Storage</strong>
-          Real-time local revenue breakdown by client, source, and custom reporting periods.
+      <div class="spec-grid">
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">Architecture</span>
+          <h3>Offline-First Sync Engine</h3>
+          <p>SQLite for zero-latency local operations, synced asynchronously with remote Supabase (PostgreSQL).</p>
         </div>
-        <div class="feature-item">
-          <strong>State-Rollback Engine</strong>
-          Custom session-tracking state rollback to keep financial records precise after manual historical edits.
+
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">Billing Engine</span>
+          <h3>Flexible Payment Models</h3>
+          <p>Automated tracking for one-time payments, lesson passes, and time-limited bundles with auto-expiration.</p>
         </div>
-        <div class="feature-item">
-          <strong>Billing & Pass Logic</strong>
-          Handles one-time payments, lesson passes, and time-limited lesson bundles with auto-expiration alerts.
+
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">Data Integrity</span>
+          <h3>State-Rollback Mechanism</h3>
+          <p>Custom session tracking rollback to keep financial ledgers 100% accurate after manual historical edits.</p>
         </div>
-        <div class="feature-item">
-          <strong>Automated CI/CD Pipeline</strong>
-          Configured GitHub Actions and EAS Build for multi-environment production testing.
+
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">Analytics</span>
+          <h3>SQLite Financial Analytics</h3>
+          <p>Real-time revenue breakdown by source, period, and client directly via optimized SQL reporting queries.</p>
+        </div>
+
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">UX & System</span>
+          <h3>Local Notifications</h3>
+          <p>Background push notification scheduler alerting tutors when client lesson passes or bundles expire.</p>
+        </div>
+
+        <div class="spec-card">
+          <span class="tag" style="color: var(--orange);">Deployment</span>
+          <h3>Automated CI/CD</h3>
+          <p>Multi-environment testing and production builds configured with GitHub Actions and EAS Build.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CREATIVE EXPERIMENTS: GENERATIVE SOUND -->
+<!-- EXPERIMENTS: GENERATIVE SOUND -->
 <section id="sound">
   <div class="container">
     <div class="section-head">
@@ -402,7 +422,7 @@
 <!-- FOOTER / CONTACT -->
 <footer id="contact">
   <div class="container">
-    <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text);">Vladimir Mastepanov — Barcelona, Spain</p>
+    <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text);">Vladimir Mastepanov - Barcelona, Spain</p>
     <a href="mailto:mastepanovmail@gmail.com">mastepanovmail@gmail.com</a> · 
     <a href="https://github.com/VladimirMastepanov" target="_blank" rel="noopener">GitHub</a> · 
     <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
