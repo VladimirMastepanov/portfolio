@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Vladimir Mastepanov — Frontend & Mobile Developer. React Native products from custom Skia graphics engines to offline-first apps and generative audio experiments.">
+<meta name="description" content="Vladimir Mastepanov - Frontend & Mobile Developer. React Native products from custom Skia graphics engines to offline-first apps and generative audio experiments.">
 <title>Vladimir Mastepanov - Frontend & Mobile Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
   .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
   section { padding: 90px 0; }
 
-  /* ---------- NAV ---------- */
+  /* NAV */
   nav {
     position: sticky; top: 0; z-index: 50;
     backdrop-filter: blur(10px);
@@ -64,9 +64,8 @@
   nav .links { display: flex; gap: 24px; }
   nav .links a { font-size: 0.88rem; color: var(--text-dim); text-decoration: none; }
   nav .links a:hover { color: var(--text); }
-  nav .burger { display: none; background: none; border: 1px solid var(--line); border-radius: 6px; color: var(--text); font-family: var(--mono); font-size: 0.8rem; padding: 8px 12px; cursor: pointer; }
 
-  /* ---------- HERO ---------- */
+  /* HERO */
   .hero {
     position: relative;
     min-height: 82vh;
@@ -110,12 +109,10 @@
   .btn-primary:hover { opacity: 0.88; color: var(--bg); }
   .btn-ghost:hover { border-color: var(--text-dim); }
 
-  /* ---------- SECTION HEADERS ---------- */
   .section-head { margin-bottom: 40px; }
   .section-head h2 { font-size: 1.9rem; margin-top: 10px; }
   .section-head p { color: var(--text-dim); margin-top: 10px; max-width: 640px; }
 
-  /* ---------- APP LAYOUT (Unified Project Section) ---------- */
   .project-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .project-section.alt { background: var(--bg-raised); }
 
@@ -148,7 +145,13 @@
     font-family: var(--mono); color: var(--green); font-size: 0.82rem; margin-top: 8px; display: block;
   }
 
-  /* ---------- SOUND PROJECTS ---------- */
+  .project-links { margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .project-links a {
+    font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim);
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .project-links a:hover { color: var(--text); }
+
   .sound-card {
     border: 1px solid var(--line); border-radius: 16px;
     padding: 32px; margin-bottom: 24px;
@@ -191,6 +194,7 @@
     color: var(--text-dim); font-family: var(--mono); font-size: 0.85rem;
   }
   footer a { text-decoration: underline; text-underline-offset: 4px; }
+  footer .yt-link { display: block; margin-top: 10px; }
 
   @media (max-width: 768px) {
     .app-layout { flex-direction: column; align-items: center; }
@@ -229,10 +233,10 @@
   </div>
   <div class="container hero-content">
     <div class="eyebrow">Frontend & Mobile Developer</div>
-    <h1>Building mobile products - from custom graphics engines to offline-first apps.</h1>
+    <h1>I build mobile products, from custom graphics engines to offline-first apps.</h1>
     <p class="lead">
-      Independent software engineer with 3+ years shipping React Native products end-to-end:
-      architecture, custom Skia rendering, local data layers (SQLite + Supabase), and store release.
+      Independent software engineer with 3+ years shipping React Native products end to end.
+      I handle architecture, custom Skia rendering, local data layers with SQLite and Supabase, and the store release process.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#jigsaw">Explore Projects</a>
@@ -246,51 +250,51 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Flagship project</div>
-      <h2>Jigsaw Puzzle - Cross-Platform Mobile Game</h2>
-      <p>Solo end-to-end product development: designed the full mobile app architecture, dynamic puzzle game logic, UI interactions, custom Skia graphics engine, and store pipeline.</p>
+      <h2>Jigsaw Puzzle: a cross-platform mobile game</h2>
+      <p>Solo end-to-end development. I designed the app architecture, the puzzle game logic, the UI interactions, a custom Skia graphics engine, and the store pipeline myself.</p>
     </div>
 
     <div class="app-layout">
       <div class="app-video">
-        Gameplay Video Demo<br><small style="opacity: 0.7">(screen capture placeholder)</small>
+        Gameplay video demo<br><small style="opacity: 0.7">(screen capture placeholder)</small>
       </div>
 
       <div class="spec-grid">
         <div class="spec-card">
-          <span class="tag">Product Scope</span>
-          <h3>Solo End-to-End Build</h3>
-          <p>Full app architecture, game state persistence, responsive UI, haptics, and Google Play review cycle.</p>
+          <span class="tag">Product scope</span>
+          <h3>Solo end-to-end build</h3>
+          <p>Full app architecture, game state persistence, responsive UI, haptics, and the Google Play review cycle.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag">Graphics Core</span>
-          <h3>React Native Skia Engine</h3>
-          <p>Custom rendering pipeline handling 400+ interactive SVG elements in real time.</p>
+          <span class="tag">Graphics core</span>
+          <h3>React Native Skia engine</h3>
+          <p>A custom rendering pipeline that handles 400+ interactive SVG elements in real time.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag">Performance</span>
           <h3>Optimization</h3>
-          <p>Selective rendering & SVG path caching.</p>
+          <p>Selective rendering and SVG path caching keep the frame rate steady even on weaker hardware.</p>
           <span class="metric">Stable 60 FPS on mid-tier devices</span>
         </div>
 
         <div class="spec-card">
-          <span class="tag">Math Core</span>
-          <h3>Coordinate System</h3>
-          <p>Custom zoom/pan coordinate system with sub-pixel drag & drop precision across dynamic scale levels.</p>
+          <span class="tag">Math core</span>
+          <h3>Coordinate system</h3>
+          <p>A custom zoom and pan coordinate system, built for precise drag and drop across different scale levels.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag">Algorithm</span>
-          <h3>Procedural Cutting</h3>
-          <p>Procedural generation of dynamic interlocking puzzle piece shapes.</p>
+          <h3>Procedural cutting</h3>
+          <p>Puzzle piece shapes are generated procedurally, so each interlocking cut is different.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag">Pipeline & Status</span>
-          <h3>CI/CD & Store Release</h3>
-          <p>Automated build workflows (GitHub Actions + EAS). Passed Google Play review; pending marketing launch.</p>
+          <span class="tag">Pipeline & status</span>
+          <h3>CI/CD and store release</h3>
+          <p>Build workflows automated with GitHub Actions and EAS. Passed Google Play review and is pending public launch.</p>
         </div>
       </div>
     </div>
@@ -302,50 +306,50 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Production application</div>
-      <h2>Stattix - Attendance & Revenue Tracker for Tutors</h2>
-      <p>Offline-first mobile CRM for private tutors: record payment history, track lesson passes, manage attendance, and calculate revenue analytics locally.</p>
+      <h2>Stattix: attendance and revenue tracking for tutors</h2>
+      <p>An offline-first CRM built for private tutors. It records payment history, tracks lesson passes, manages attendance, and calculates revenue locally, no internet connection required.</p>
     </div>
 
     <div class="app-layout">
       <div class="app-video">
-        Stattix Demo Video<br><small style="opacity: 0.7">(replace src with real video ID)</small>
+        Stattix demo video<br><small style="opacity: 0.7">(replace src with real video ID)</small>
       </div>
 
       <div class="spec-grid">
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Architecture</span>
-          <h3>Offline-First Sync Engine</h3>
-          <p>SQLite for zero-latency local operations, synced asynchronously with remote Supabase.</p>
+          <h3>Offline-first sync engine</h3>
+          <p>SQLite handles local operations with zero latency, then syncs asynchronously with a remote Supabase backend.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag" style="color: var(--orange);">Ledger & Pass Tracking</span>
-          <h3>Payment & Pass Tracking</h3>
-          <p>Manual logging for one-time payments, pre-paid lesson passes, and time-limited bundles with auto-expiration alerts.</p>
+          <span class="tag" style="color: var(--orange);">Ledger & pass tracking</span>
+          <h3>Payment and pass tracking</h3>
+          <p>Logs one-time payments, pre-paid lesson passes, and time-limited bundles, with alerts before anything expires.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag" style="color: var(--orange);">Data Integrity</span>
-          <h3>State-Rollback Mechanism</h3>
-          <p>Custom session-tracking rollback to keep financial ledgers 100% accurate after manual historical corrections.</p>
+          <span class="tag" style="color: var(--orange);">Data integrity</span>
+          <h3>State rollback mechanism</h3>
+          <p>A custom rollback system keeps financial records accurate even after manual historical corrections.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Analytics</span>
-          <h3>SQLite Financial Reporting</h3>
-          <p>Real-time revenue breakdowns by source, period, and client directly via optimized local SQL queries.</p>
+          <h3>SQLite financial reporting</h3>
+          <p>Revenue breakdowns by source, period, and client, computed directly through optimized local SQL queries.</p>
         </div>
 
         <div class="spec-card">
-          <span class="tag" style="color: var(--orange);">UX & System</span>
-          <h3>Local Notifications</h3>
-          <p>Background push notification scheduler alerting tutors when client lesson passes or bundles are about to expire.</p>
+          <span class="tag" style="color: var(--orange);">UX & system</span>
+          <h3>Local notifications</h3>
+          <p>A background scheduler alerts tutors when a client's lesson pass or bundle is about to run out.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag" style="color: var(--orange);">Deployment</span>
           <h3>Automated CI/CD</h3>
-          <p>Multi-environment testing and production builds configured with GitHub Actions and EAS Build.</p>
+          <p>Multi-environment testing and production builds, configured with GitHub Actions and EAS Build.</p>
         </div>
       </div>
     </div>
@@ -357,8 +361,8 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Sound experiments</div>
-      <h2>Generative Audio Applications</h2>
-      <p>Two standalone mobile experiments built to explore algorithmic randomness and audio design. Every sound layer and transition runs on custom hand-crafted state logic.</p>
+      <h2>Generative audio applications</h2>
+      <p>Two standalone experiments I built to play with algorithmic randomness and sound design. No AI involved, every layer and transition runs on hand-written state logic.</p>
     </div>
 
     <!-- Biaser -->
@@ -379,17 +383,20 @@
           referrerpolicy="strict-origin-when-cross-origin">
        </iframe>
       </div>
+      <div class="project-links">
+        <a href="https://www.youtube.com/playlist?list=YOUR_BIASER_PLAYLIST_ID" target="_blank" rel="noopener">Watch more biaser demos on YouTube</a>
+      </div>
       <button class="accordion-toggle" data-target="biaser-body">Read technical breakdown ▾</button>
       <div class="accordion-body" id="biaser-body">
         <div class="accordion-inner">
-          <p>biaser generates ambient music through phase-shifting loops. The concept draws on generative music principles: sound environments that assemble themselves organically without a predetermined sequence.</p>
-          <p>The system runs on multiple short audio loops playing simultaneously, constantly drifting out of sync due to coprime loop durations.</p>
-          <h4>Architecture & Implementation</h4>
-          <p>5 mood modes, each drawing from a pool of 16 pre-built sound configurations. Each configuration manages 22 simultaneous audio channels running loop lengths between 18 and 50 seconds to maximize phase variation before repetition.</p>
+          <p>biaser generates ambient music through phase-shifting loops. The idea draws on generative music principles: sound environments that assemble themselves organically, with no fixed sequence behind them.</p>
+          <p>The system runs several short audio loops at once, and because their durations are coprime, they keep drifting out of sync with each other.</p>
+          <h4>Architecture and implementation</h4>
+          <p>There are 5 mood modes, each pulling from a pool of 16 pre-built sound configurations. A configuration runs 22 audio channels simultaneously, with loop lengths between 18 and 50 seconds chosen to delay repetition as long as possible.</p>
           <div class="video-embed" style="margin-top: 16px;">
            <iframe
              src="https://www.youtube.com/embed/G7tVJscyNro"
-             title="biaser — yellow mood demo"
+             title="biaser, yellow mood demo"
              allow="clipboard-write; encrypted-media; picture-in-picture"
              referrerpolicy="strict-origin-when-cross-origin"
              allowfullscreen>
@@ -405,7 +412,7 @@
       <p class="tagline">An interactive soundscape exploring non-linear control loops.</p>
       <div class="sound-meta">
         <span>6 audio modules</span>
-        <span>6–11 parameters each</span>
+        <span>6-11 parameters each</span>
         <span>Dynamic parameter shuffling</span>
       </div>
       <div class="video-embed">
@@ -417,16 +424,19 @@
           referrerpolicy="strict-origin-when-cross-origin">
         </iframe>
       </div>
+      <div class="project-links">
+        <a href="https://www.youtube.com/playlist?list=YOUR_FRUSTRATOR_PLAYLIST_ID" target="_blank" rel="noopener">Watch more Frustrator demos on YouTube</a>
+      </div>
       <button class="accordion-toggle" data-target="frustrator-body">Read technical breakdown ▾</button>
       <div class="accordion-body" id="frustrator-body">
         <div class="accordion-inner">
           <p>Frustrator is an interactive audio application built around delayed feedback and stochastic control mechanics.</p>
           <h4>How it works</h4>
-          <p>Six audio modules manage between 6 and 11 live control parameters. On launch, parameters are assigned randomized baseline values and mapping targets.</p>
+          <p>Six audio modules manage between 6 and 11 live control parameters. On launch, every parameter gets a randomized baseline value and mapping target.</p>
           <div class="video-embed" style="margin-top: 16px;">
             <iframe
               src="https://www.youtube.com/embed/Yn6pFd1Ul_M"
-              title="Frustrator — extended demo"
+              title="Frustrator, extended demo"
               allowfullscreen
               allow="clipboard-write; encrypted-media; picture-in-picture"
               referrerpolicy="strict-origin-when-cross-origin">
@@ -441,10 +451,11 @@
 <!-- FOOTER / CONTACT -->
 <footer id="contact">
   <div class="container">
-    <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text);">Vladimir Mastepanov - Barcelona, Spain</p>
+    <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text);">Vladimir Mastepanov, Barcelona, Spain</p>
     <a href="mailto:mastepanovmail@gmail.com">mastepanovmail@gmail.com</a> ·
     <a href="https://github.com/VladimirMastepanov" target="_blank" rel="noopener">GitHub</a> ·
     <a href="https://www.linkedin.com/in/vladimirmastepanov" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="yt-link" href="https://www.youtube.com/YOUR_CHANNEL_HANDLE" target="_blank" rel="noopener">More demos on my YouTube channel</a>
   </div>
 </footer>
 
