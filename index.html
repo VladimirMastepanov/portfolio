@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vladimir Mastepanov — Frontend & Mobile Developer</title>
+<meta name="description" content="Vladimir Mastepanov — Frontend & Mobile Developer. React Native products from custom Skia graphics engines to offline-first apps and generative audio experiments.">
+<title>Vladimir Mastepanov - Frontend & Mobile Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -63,6 +64,7 @@
   nav .links { display: flex; gap: 24px; }
   nav .links a { font-size: 0.88rem; color: var(--text-dim); text-decoration: none; }
   nav .links a:hover { color: var(--text); }
+  nav .burger { display: none; background: none; border: 1px solid var(--line); border-radius: 6px; color: var(--text); font-family: var(--mono); font-size: 0.8rem; padding: 8px 12px; cursor: pointer; }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -116,7 +118,7 @@
   /* ---------- APP LAYOUT (Unified Project Section) ---------- */
   .project-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .project-section.alt { background: var(--bg-raised); }
-  
+
   .app-layout { display: flex; gap: 32px; align-items: flex-start; margin-top: 24px; }
   .app-video {
     width: 280px; aspect-ratio: 9/16; flex-shrink: 0;
@@ -135,7 +137,7 @@
     background: var(--bg); padding: 20px; border: 1px solid var(--line); border-radius: 8px;
   }
   .project-section.alt .spec-card { background: var(--bg); }
-  
+
   .spec-card .tag {
     font-family: var(--mono); font-size: 0.72rem; color: var(--blue);
     letter-spacing: 0.05em; text-transform: uppercase;
@@ -197,6 +199,7 @@
   @media (max-width: 640px) {
     section { padding: 64px 0; }
     .rings { opacity: 0.35; justify-content: center; }
+    nav .links { display: none; }
   }
 </style>
 </head>
@@ -249,20 +252,20 @@
 
     <div class="app-layout">
       <div class="app-video">
-        Gameplay Video Demo<br><small style="opacity: 0.7">(Screen capture placeholder)</small>
+        Gameplay Video Demo<br><small style="opacity: 0.7">(screen capture placeholder)</small>
       </div>
 
       <div class="spec-grid">
         <div class="spec-card">
           <span class="tag">Product Scope</span>
           <h3>Solo End-to-End Build</h3>
-          <p>Full app architecture, game state persistence, responsive UI, haptics, and Google Play Review cycle.</p>
+          <p>Full app architecture, game state persistence, responsive UI, haptics, and Google Play review cycle.</p>
         </div>
 
         <div class="spec-card">
           <span class="tag">Graphics Core</span>
           <h3>React Native Skia Engine</h3>
-          <p>Custom rendering pipeline handling 400+ interactive SVG elements in real-time.</p>
+          <p>Custom rendering pipeline handling 400+ interactive SVG elements in real time.</p>
         </div>
 
         <div class="spec-card">
@@ -298,19 +301,14 @@
 <section class="project-section" id="stattix">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Production Application</div>
+      <div class="eyebrow">Production application</div>
       <h2>Stattix - Attendance & Revenue Tracker for Tutors</h2>
       <p>Offline-first mobile CRM for private tutors: record payment history, track lesson passes, manage attendance, and calculate revenue analytics locally.</p>
     </div>
 
     <div class="app-layout">
       <div class="app-video">
-        <iframe 
-          src="https://www.youtube.com/embed/YOUR_STATTIX_VIDEO_ID" 
-          title="Stattix App Demo"
-          allowfullscreen
-          allow="clipboard-write; encrypted-media; picture-in-picture"
-        ></iframe>
+        Stattix Demo Video<br><small style="opacity: 0.7">(replace src with real video ID)</small>
       </div>
 
       <div class="spec-grid">
@@ -373,8 +371,8 @@
         <span>Zero saved state</span>
       </div>
       <div class="video-embed">
-        <iframe 
-          src="https://www.youtube.com/embed/IjRKNhIjT2E?si=SM7E9G79r8NUwl7x" 
+        <iframe
+          src="https://www.youtube.com/embed/IjRKNhIjT2E"
           title="biaser demo video"
           allowfullscreen
           allow="clipboard-write; encrypted-media; picture-in-picture"
@@ -389,9 +387,9 @@
           <h4>Architecture & Implementation</h4>
           <p>5 mood modes, each drawing from a pool of 16 pre-built sound configurations. Each configuration manages 22 simultaneous audio channels running loop lengths between 18 and 50 seconds to maximize phase variation before repetition.</p>
           <div class="video-embed" style="margin-top: 16px;">
-           <iframe 
-             src="https://www.youtube.com/embed/G7tVJscyNro" 
-             title="biaser yellow"
+           <iframe
+             src="https://www.youtube.com/embed/G7tVJscyNro"
+             title="biaser — yellow mood demo"
              allow="clipboard-write; encrypted-media; picture-in-picture"
              referrerpolicy="strict-origin-when-cross-origin"
              allowfullscreen>
@@ -411,24 +409,28 @@
         <span>Dynamic parameter shuffling</span>
       </div>
       <div class="video-embed">
-        <iframe 
-          src="https://www.youtube.com/embed/nO5he_yKxbU" 
+        <iframe
+          src="https://www.youtube.com/embed/nO5he_yKxbU"
+          title="Frustrator demo video"
           allowfullscreen
           allow="clipboard-write; encrypted-media; picture-in-picture"
-        ></iframe>
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
       </div>
       <button class="accordion-toggle" data-target="frustrator-body">Read technical breakdown ▾</button>
       <div class="accordion-body" id="frustrator-body">
         <div class="accordion-inner">
           <p>Frustrator is an interactive audio application built around delayed feedback and stochastic control mechanics.</p>
           <h4>How it works</h4>
-          <p>Six audio modules manage between 6 to 11 live control parameters. Upon application startup, parameters are assigned randomized baseline values and mapping targets.</p>
+          <p>Six audio modules manage between 6 and 11 live control parameters. On launch, parameters are assigned randomized baseline values and mapping targets.</p>
           <div class="video-embed" style="margin-top: 16px;">
-            <iframe 
-              src="https://www.youtube.com/embed/Yn6pFd1Ul_M?si=CiuRHFhZwwBvvL5W" 
+            <iframe
+              src="https://www.youtube.com/embed/Yn6pFd1Ul_M"
+              title="Frustrator — extended demo"
               allowfullscreen
               allow="clipboard-write; encrypted-media; picture-in-picture"
-            ></iframe>
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
           </div>
         </div>
       </div>
@@ -440,8 +442,8 @@
 <footer id="contact">
   <div class="container">
     <p style="margin-bottom: 12px; font-size: 1rem; color: var(--text);">Vladimir Mastepanov - Barcelona, Spain</p>
-    <a href="mailto:mastepanovmail@gmail.com">mastepanovmail@gmail.com</a> · 
-    <a href="https://github.com/VladimirMastepanov" target="_blank" rel="noopener">GitHub</a> · 
+    <a href="mailto:mastepanovmail@gmail.com">mastepanovmail@gmail.com</a> ·
+    <a href="https://github.com/VladimirMastepanov" target="_blank" rel="noopener">GitHub</a> ·
     <a href="https://www.linkedin.com/in/vladimirmastepanov" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </footer>
@@ -451,12 +453,15 @@
     btn.addEventListener('click', () => {
       const body = document.getElementById(btn.dataset.target);
       body.classList.toggle('open');
-      btn.textContent = body.classList.contains('open') 
-        ? btn.textContent.replace('▾','▴') 
+      btn.textContent = body.classList.contains('open')
+        ? btn.textContent.replace('▾','▴')
         : btn.textContent.replace('▴','▾');
     });
   });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
